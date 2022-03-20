@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!--
+  Just-In-Time(JIT)本採用
+  前カラー使用可能
+  影の色
+  下線の色
+  フォームの色
+  印刷に含めるかの指定
+  解像度の指定
+  スクロール位置調整
+  他...
+  -->
+<!--
+  CDNは開発時のみ（本番環境は非推奨）
+
+  NPMでインストール
+
+  npm init -y //package.json作成
+  npm install -D tailwindcss@3.0.7
+  -->
+<!--
+  Just-In-Time
+  tailwind.config.js/contentに追記
+  content:["./public/**/*.html"]
+  Public/index.html作成
+  <link rel="stylesheet" href="styles.css">
+  $ npx run watch で監視モード実行し
+  HTMLに入力すると
+  自動でpublic/styles.cssに反映
+  -->
+<!--
+  色と透明度
+  ver3では追加設定なしで全ての色を使える
+  text-cyan-300など
+  色の後に /50とつけると
+  透明度(opacity)を設定できる
+
+  bg-lime-500/80
+  -->
+<!--
+  任意の値
+  ver3では
+  width, height, margin, paddingなどで
+  任意の値を使うことができる
+  w-[5px]
+  ml-[5px]
+  など
+  -->
+<!--
+  アスペクト比（縦横比）
+  ver3では
+  画像や動画の縦横比を
+  簡単に設定できる
+  aspect-video...横16:縦9
+  aspect-square...1:1
+  -->
+<!--
+スムーズなスクロール 位置調整
+スムーズにスクロールする機能
+スクロール先の位置調整もできる
+<html class="scroll-smooth">スクロール1</html>
+<section id="scroll1" class="scroll-mt-8">
+  セクション1
+</section>
+-->
+
+
+
+
+</body>
+</html>

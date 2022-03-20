@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!--
+  npm init -y // 設定ファイル package.json生成
+
+  ver2指定
+  npm install -D tailwindcss@2.0.2 postcss@8.2.2 autoprefixer@10.1.0
+
+  postcss CSS拡張機能
+  autoprefixer ベンダープレフィックス
+  （ブラウザごとの対応）
+   -->
+<!--
+   src（改発フォルダ） → public（公開フォルダ）
+   src/style.css内に
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+    -->
+<!--
+    $ npx tailwindcss init // 生成
+    $ npx tailwindcss init --full // 初期設定あり
+
+    参考として
+    初期設定版を作成しファイル名変更
+    tailwindcss_default.config.js
+     -->
+<!--
+     const colors = require('tailwindcss/colors') //この行を追加
+     theme:{
+       colors:{ //こう書くとカラーパレット毎上書き
+        blue: colors.blue
+       }
+       extend:{ // extend(拡張)の中に書くと追加
+        colors:{
+          'light-blue': colors.lightBlue
+        }
+       }
+     } -->
+<!--
+     オリジナルのカラーの追加は、node_modules/tailwindcss/colors.jsを確認する
+      -->
+<!--
+      フォントの追加
+
+      src/style.css 側に@importしつつ
+      @import url('....')
+      @tailwind base;
+      -----------------------
+
+      theme:{
+        extend:{
+          fontFamily:{
+            'noto': ['Noto Sans JP'] //googleとadobeが共同開発
+          }
+        }
+      }
+      GoogleFontを使う場合は（増やすほどサイズも増えるので）
+      1フォント3スタイルくらいに抑える
+       -->
+<!--
+       @apply
+       tailwindcssのクラスを使って、新しくクラスを作る機能
+       クラスをまとめることができる
+       vscode...拡張機能postcss
+
+       src/style.css
+       :
+       :
+       @tailiwnd utilities;
+
+       .btn{
+         @apply bg-blue-500 text-white font-semibold py-2 px-8 rounded-md;
+       }
+        -->
+<!--
+        @layer
+        HTMLタグにまとめてクラスを適用
+        @layer base {
+          h2 {
+            @apply text-xl text-center;
+          }
+        }
+        CORE CONCEPTS / Adding Base Style
+         -->
+<!--
+         purge機能
+         使っていないCSSクラスをパージして
+         ファイルサイズを軽くする
+
+         npm install cross-env
+        -->
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <!--
+    position 重なり　固定
+    static 通常
+    要素を重ねる
+    親が relative 子がabsolute
+
+    要素を固定(完全固定 / 表示されてから固定)
+    fixed(上に戻るボタン / sticky(ヘッダー・フッター))
+
+    top/bottom/left/rightを組み合わせる
+  -->
+
+  <div>
+    <img src="images/pizza.jpg" class="w-96">
+    <span>文字を重ねたい</span>
+  </div>
+
+  <div class="mt-16 relative">
+    <img src="images/pizza.jpg" class="w-96 absolute">
+    <span class="absolute top-16 left-16 text-white">文字を重ねたい</span>
+  </div>
+
+  <div class="mt-96 relative w-96 h-60 bg-red-400">
+    <div class="absolute w-40 h-40 top-8 left-8 bg-blue-300">
+    </div>
+    <div class="absolute w-40 h-40 top-16 left-16 bg-blue-500">
+    </div>
+  </div>
+
+  <div class="fixed bottom-8 right-8">戻るボタン</div>
+  <div class="sticky top-0 p-2 bg-green-300">stickyヘッダー</div>
+  <div class="h-96">あああ</div>
+  <div class="h-96">あああ</div>
+  <div class="h-96">あああ</div>
+
+
+</body>
+</html>

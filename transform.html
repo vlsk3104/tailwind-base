@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <!--
+    Origin 原点（中心 + 上下左右 + 斜め）
+    Rotate 開店（角度）0が基準
+    Skew 歪み（角度）0が基準
+    Scale 拡大縮小（xとy）100が基準
+    Translate 移動（xとy）0が基準
+  -->
+
+  rotate
+  <img class="transition duration-1000 transform hover:rotate-45 w-60 mb-16" src="images/pizza.jpg" alt="">
+  scale
+  <img class="transition duration-1000 transform hover:scale-150 w-60 mb-16" src="images/pizza.jpg" alt="">
+  translate
+  <img class="transition duration-1000 transform hover:translate-x-40 w-60 mb-16" src="images/pizza.jpg" alt="">
+  skew
+  <img class="transition duration-1000 transform hover:skew-x-12 w-60 mb-16" src="images/pizza.jpg" alt="">
+  translate (ease-in)
+  <img class="transition duration-1000 transform ease-in hover:translate-x-40 w-60 mb-16" src="images/pizza.jpg" alt="">
+  translate (ease-out)
+  <img class="transition duration-1000 transform ease-out hover:translate-x-40 w-60 mb-16" src="images/pizza.jpg" alt="">
+
+
+</body>
+</html>
